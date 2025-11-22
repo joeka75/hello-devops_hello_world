@@ -57,36 +57,31 @@ A konténer elindítása után az alkalmazás elérhető:
 
 ##  Git / Trunk-Based Development
 
-A projekt a *trunk-based development* módszert követi.
+A projekt a trunk-based development módszert követi.
 
 ## Trunk (fő ág)
 
--   A fő ág a **master** branch, ez szolgál trunkként.
+-   A fő ág a master branch, ez szolgál trunkként.
 
 ## Feature branch
 
 -   Külön feature branch készült az új funkció demonstrálására:
 
-        Hello-DevOps-World-from-Feature-Branch
+        hello-devops_hello_world_Branch
 
 ## Egymásra épülő commitok
 
 -   A projekt több, egymásra épülő commitot tartalmaz.
--   A commit üzenetek értelmesek, és a funkcionális változásokat
-    tükrözik.
+
 
 ## Példa commit üzenet
 
-    feat: add new feature button
+    Branch_button_add
 
-Ez bizonyítja, hogy a fejlesztés elkülönített feature branch-en történt,
-majd visszavezethető a trunk ágra.
 
 ------------------------------------------------------------------------
 
 ## Összegzés
-
-A projekt teljesíti a feladat összes kötelező DevOps lépését:
 
 -   React „Hello World" alkalmazás
 -   Build és futtatás dokumentálva
@@ -94,3 +89,37 @@ A projekt teljesíti a feladat összes kötelező DevOps lépését:
 -   Dockerfile működik
 -   Image build és futtatás parancsai dokumentálva
 -   Alkalmazás fut konténerből HTTP-n (http://localhost:8080)
+
++1 feladat
+
+## Deploy lépések dokumentálva a README-ben
+
+##  Felhő Deploy – Render.com (FREE tier)
+
+A projekt deployolva lett a Render.com felhőszolgáltatásba az ingyenes csomag segítségével.
+
+##  Szolgáltató
+Render.com – Free Web Service tier
+
+## Publikus URL
+https://hello-devops-hello-world-1.onrender.com
+
+## Deploy lépések
+
+1. Bejelentkezés a https://render.com oldalra GitHub autentikációval.
+2. New + Web Service létrehozása.
+3. Forrásként a GitHub repository kiválasztása.
+4. Environment / Runtime: Docker
+5. Branch: master
+6. Root Directory: ./
+7. Plan: Free
+8. Deploy Web Service megnyomása.
+9. A Render automatikusan:
+   - lehúzza a GitHub repót,
+   - buildeli a Docker imaget,
+   - futtatja az NGINX alapú konténert,
+   - publikusan elérhetővé teszi az appot.
+
+## Eredmény
+Az alkalmazás sikeresen fut a Render felhőben, Docker konténerben, elérhető HTTP-n keresztül a publikus URL-en.
+
